@@ -25,7 +25,7 @@
     <main class="container">
         <h1>Przykladowy widok + przykladowe API</h1>
         <p>
-            Dane sa pobierane z endpointu <code>/api/sample-equipment</code>.
+            Dane sa ssspobierane z endpointu <code>/api/sample-equipment</code>.
         </p>
 
         <div class="card">
