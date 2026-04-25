@@ -6,9 +6,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+Route::view('/login', 'auth.login')
+    ->middleware('guest')
+    ->name('login');
+
+Route::view('/register', 'auth.register')
+    ->middleware('guest')
+    ->name('register');
 
 Route::get('/api/sample-equipment', function () {
     return response()->json([
@@ -41,3 +45,7 @@ Route::get('/api/sample-equipment', function () {
         ],
     ]);
 });
+
+Route::view('/demo-layout', 'pages.demo-layout');
+
+require __DIR__.'/auth.php';
